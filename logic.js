@@ -13,7 +13,7 @@ function submit01() {
     point = point + 1;
   }
   document.getElementById('score').innerText = point;
-  console.log(enterNumber);
-  console.log(random);
-  console.log(`###### ${point}`);
+  //console.log(enterNumber);
+  //console.log(random);
+  //console.log(`###### ${point}`);
 }
