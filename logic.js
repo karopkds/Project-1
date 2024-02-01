@@ -32,35 +32,76 @@ function submit01() {
   //console.log(`###### ${point}`);
   
 }
+
 const button1 =document.querySelectorAll('.btn1');
 for(let i=0;i<button1.length;i++){
+  
  // console.log(button1[i].textContent);
   button1[i].addEventListener('click',function(){
     let eventbtn = (button1[i].textContent);
+
+
+    
     if(eventbtn === 'ABOUT'){
       paragraph.classList.remove('hidden');
       closeBtn.classList.remove('hidden');
       overlay.classList.remove('hidden');
+       document.addEventListener('keydown',function(e){
+        console.log(e);
+        if (e.key === 'Escape' && !paragraph.classList.contains('hidden')) {
+          paragraph.classList.add('hidden');
+          closeBtn.classList.add('hidden');
+          overlay.classList.add('hidden');
+        }
+      })
       closeBtn.addEventListener('click',function(){
         paragraph.classList.add('hidden');
         closeBtn.classList.add('hidden');
         overlay.classList.add('hidden');
+        closingEsc();
       })
+
+
+
     } else if( eventbtn === 'Contact'){
       paraContact.classList.remove('hidden');
        closeBtn.classList.remove('hidden');
+       overlay.classList.remove('hidden');
+       document.addEventListener('keydown',function(e){
+        console.log(e);
+        if (e.key === 'Escape' && !paraContact.classList.contains('hidden')) {
+          paraContact.classList.add('hidden');
+          closeBtn.classList.add('hidden');
+          overlay.classList.add('hidden');
+        }
+      })
        closeBtn.addEventListener('click',function(){
         paraContact.classList.add('hidden');
         closeBtn.classList.add('hidden');
+        closingEsc();
        })
+
+
+
+
     } else if( eventbtn === 'Close'){
       paraClose.classList.remove('hidden');
       closeBtn.classList.remove('hidden');
+      overlay.classList.remove('hidden');
+      document.addEventListener('keydown',function(e){
+        console.log(e);
+        if (e.key === 'Escape' && !paraClose.classList.contains('hidden')) {
+          paraClose.classList.add('hidden');
+          closeBtn.classList.add('hidden');
+          overlay.classList.add('hidden');
+        }
+      })
       closeBtn.addEventListener('click',function(){
         paraClose.classList.add('hidden');
       closeBtn.classList.add('hidden');
       })
   }})
+  
 }
 
 
