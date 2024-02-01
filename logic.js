@@ -1,3 +1,9 @@
+'use strict'
+const paragraph = document.querySelector('.para');
+const paraContact = document.querySelector('.paraContact');
+const paraClose = document.querySelector('.paraClose');
+const closeBtn = document.querySelector('.closee');
+const overlay = document.querySelector('.overlay');
 let point = 10;
 let run = 0;
 function submit01() {
@@ -24,4 +30,40 @@ function submit01() {
   //console.log(enterNumber);
   //console.log(random);
   //console.log(`###### ${point}`);
+  
 }
+const button1 =document.querySelectorAll('.btn1');
+for(let i=0;i<button1.length;i++){
+ // console.log(button1[i].textContent);
+  button1[i].addEventListener('click',function(){
+    let eventbtn = (button1[i].textContent);
+    if(eventbtn === 'ABOUT'){
+      paragraph.classList.remove('hidden');
+      closeBtn.classList.remove('hidden');
+      overlay.classList.remove('hidden');
+      closeBtn.addEventListener('click',function(){
+        paragraph.classList.add('hidden');
+        closeBtn.classList.add('hidden');
+        overlay.classList.add('hidden');
+      })
+    } else if( eventbtn === 'Contact'){
+      paraContact.classList.remove('hidden');
+       closeBtn.classList.remove('hidden');
+       closeBtn.addEventListener('click',function(){
+        paraContact.classList.add('hidden');
+        closeBtn.classList.add('hidden');
+       })
+    } else if( eventbtn === 'Close'){
+      paraClose.classList.remove('hidden');
+      closeBtn.classList.remove('hidden');
+      closeBtn.addEventListener('click',function(){
+        paraClose.classList.add('hidden');
+      closeBtn.classList.add('hidden');
+      })
+  }})
+}
+
+
+
+
+
