@@ -12,8 +12,9 @@
       <h1>Welcome To Guess My Number Game:)</h1>
       <h2>💗</h2>
       <h4>The Radom Number is :🙄 <span id="randomnumber"></span></h4>
-      <input id="NumberEntred" type="number" placeholder="number B/w 1 to 10" />
-      <button onclick="submit01()">submit</button>
+      <h6>(Enter the Number B/W 1 to 6 and Click on Dice)</h6>
+      <input id="NumberEntred" type="number"  />
+     <!-- <button onclick="submit01()">submit</button> -->
       <h5>YOUR Score is: <span id="score"></span></h5>
       <h5>
         Your Wining Point is (NOTE: TAKE 5 POINT tO WIN): <span id="run"></span>
@@ -34,6 +35,10 @@
       <div class="overlay hidden">
         <button class="closee hidden">&times;</button>
       </div>
+      <!-- <img src="dice-0.png" alt="playing-dice" class="dice"/> -->
+      <button onclick="submit01()" class="dice">
+        <img src="dice-0.png" alt="playing-dice" class="diceess" />
+      </button>
     </center>
     <script src="logic.js"></script>
   </body>

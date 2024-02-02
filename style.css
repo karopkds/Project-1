@@ -11,7 +11,7 @@ html {
 
 body {
   font-family: sans-serif;
-  color: #333;
+  color: rgb(188, 91, 0);
   line-height: 1.5;
   font-size: large;
   height: 100vh;
@@ -19,8 +19,9 @@ body {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  background: linear-gradient(to top left, #28b487, #7dd56f);
-}
+  overflow: hidden;
+  /*background: linear-gradient(to top left, #28b487, #7dd56f); */
+  background: black;
 
 .btn1 {
   font-size: 2rem;
@@ -98,4 +99,17 @@ body {
   background-color: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(3px);
   z-index: 5;
+}
+
+img {
+  width: 100px; /* You can adjust the value to your desired width */
+  height: auto; /* This maintains the aspect ratio */
+}
+
+.dice {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
 }

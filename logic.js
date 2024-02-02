@@ -4,11 +4,19 @@ const paraContact = document.querySelector('.paraContact');
 const paraClose = document.querySelector('.paraClose');
 const closeBtn = document.querySelector('.closee');
 const overlay = document.querySelector('.overlay');
+const dices = document.querySelector('.diceess');
+const btndice = document.querySelector('.dice');
 let point = 10;
 let run = 0;
 function submit01() {
   let enterNumber = parseInt(document.getElementById('NumberEntred').value);
-  let random = Math.floor(Math.random() * 10);
+  console.log(enterNumber);
+  if (enterNumber > 6 || enterNumber < 1 || isNaN(enterNumber)) {
+    alert('Please enter number Between 1 to 6');
+    location.reload();
+  }
+  let random = Math.floor(Math.random() * 6) + 1;
+  dices.src = `dice-${random}.png`;
   if (point < 1) {
     let gameOver = confirm('GAME OVER');
     if (gameOver === true) {
