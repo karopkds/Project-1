@@ -13,6 +13,7 @@ body {
   font-family: sans-serif;
   color: #333;
   line-height: 1.5;
+  font-size: large;
   height: 100vh;
   position: relative;
   display: flex;
@@ -21,7 +22,7 @@ body {
   background: linear-gradient(to top left, #28b487, #7dd56f);
 }
 
-.btn1{
+.btn1 {
   font-size: 2rem;
   font-weight: 600;
   padding: 1.75rem 3.5rem;
@@ -33,40 +34,41 @@ body {
   cursor: pointer;
 }
 
-.closee{
+.closee {
   position: absolute;
   top: 1.2rem;
   right: 2rem;
   font-size: 5rem;
-  color: #333;
+  color: black;
   cursor: pointer;
   border: none;
   background: none;
+  z-index: 9999; /* Set a high z-index */
 }
-.hidden{
-   display: none;
+.hidden {
+  display: none;
 }
 
-.para{
+.para {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 70%;
-
+  font-size: large;
   background-color: white;
   padding: 6rem;
   border-radius: 5px;
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
   z-index: 10;
 }
-.paraContact{
+.paraContact {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 70%;
-
+  font-size: large;
   background-color: white;
   padding: 6rem;
   border-radius: 5px;
@@ -74,20 +76,20 @@ body {
   z-index: 10;
 }
 
-.paraClose{
+.paraClose {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 70%;
-
+  font-size: large;
   background-color: white;
   padding: 6rem;
   border-radius: 5px;
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
   z-index: 10;
 }
-.overlay{
+.overlay {
   position: absolute;
   top: 0;
   left: 0;
